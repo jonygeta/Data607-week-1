@@ -1,0 +1,3 @@
+"0","# Subset the data frame"
+"0","mushroom <- mushroom[, 1:4]"
+"0","head(mushroom)"

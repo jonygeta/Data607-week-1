@@ -1,0 +1,4 @@
+"0","# Read the data"
+"0","# mushroom <- read.table(""agaricus-lepiota.data"",header = FALSE, sep = "","", stringsAsFactors = FALSE)"
+"0","mushroom <- read.table(""C:\\Users\\Yohannes\\Desktop\\MSDS SPRING SESSION 2019\\WEEK 1 ASSIGNMENT SOLUTIONS\\DATA607\\agaricus-lepiota.data"",header = FALSE, sep = "","", stringsAsFactors = FALSE)"
+"0","head(mushroom)"

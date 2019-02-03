@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549163568190.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A17A25EC",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1549163568190,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "88256F72",
+        "caption" : "mushroom",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=mushroom&cache_key=88256F72",
+        "displayedObservations" : 8124,
+        "environment" : "",
+        "object" : "mushroom",
+        "preview" : 0,
+        "totalObservations" : 8124,
+        "variables" : 23
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

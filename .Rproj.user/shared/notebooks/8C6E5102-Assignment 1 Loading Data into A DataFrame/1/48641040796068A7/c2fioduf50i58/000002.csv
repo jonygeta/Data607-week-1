@@ -1,0 +1,2 @@
+"0","colnames(mushroom) <- c(""classes"",""cap-shape"",""cap-surface"",""cap-color"")"
+"0","head(mushroom)"

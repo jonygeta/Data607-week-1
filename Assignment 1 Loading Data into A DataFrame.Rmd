@@ -1,0 +1,99 @@
+---
+title: "Assignment 1 Loading Data into A DataFrame"
+author: "Yohannes Deboch"
+date: "February 2, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+# Read the data
+mushroom <- read.table("agaricus-lepiota.data",header = FALSE, sep = ",", stringsAsFactors = FALSE)
+head(mushroom)
+```
+```{r}
+# Subset the data frame
+mushroom <- mushroom[, 1:4]
+head(mushroom)
+```
+
+# Add Column Names
+```{r}
+
+colnames(mushroom) <- c("classes","cap-shape","cap-surface","cap-color")
+head(mushroom)
+```
+# Recode variables
+# classes
+```{r}
+
+
+paste("classes Values before recode")
+table(mushroom$classes)
+mushroom$classes[mushroom$classes == "e"] <- "edible"
+mushroom$classes[mushroom$classes == "p"] <- "poisonous"
+paste("classes Values after recode")
+table(mushroom$classes)
+```
+
+# cap-shape
+```{r}
+
+paste("cap-shape Values before recode")
+table(mushroom$`cap-shape`)
+mushroom$`cap-shape`[mushroom$`cap-shape` == "b"] <- "bell"
+mushroom$`cap-shape`[mushroom$`cap-shape` == "c"] <- "conical"
+mushroom$`cap-shape`[mushroom$`cap-shape` == "x"] <- "convex"
+mushroom$`cap-shape`[mushroom$`cap-shape` == "f"] <- "flat"
+mushroom$`cap-shape`[mushroom$`cap-shape` == "k"] <- "knobbed"
+mushroom$`cap-shape`[mushroom$`cap-shape` == "s"] <- "sunken"
+
+paste("cap-shape Values after recode")
+table(mushroom$`cap-shape`)
+```
+# cap-surface
+```{r}
+
+
+paste("cap-surface Values before recode")
+table(mushroom$`cap-surface`)
+mushroom$`cap-surface`[mushroom$`cap-surface` == "f"] <- "fibrous"
+mushroom$`cap-surface`[mushroom$`cap-surface` == "g"] <- "grooves"
+mushroom$`cap-surface`[mushroom$`cap-surface` == "y"] <- "scaly"
+mushroom$`cap-surface`[mushroom$`cap-surface` == "s"] <- "smooth"
+paste("cap-surface Values after recode")
+table(mushroom$`cap-surface`)
+```
+
+# cap-color
+
+```{r}
+
+paste("cap-color Values before recode")
+table(mushroom$`cap-color`)
+mushroom$`cap-color`[mushroom$`cap-color` == "n"] <- "brown"
+mushroom$`cap-color`[mushroom$`cap-color` == "b"] <- "buff"
+mushroom$`cap-color`[mushroom$`cap-color` == "c"] <- "cinnamon"
+mushroom$`cap-color`[mushroom$`cap-color` == "g"] <- "gray"
+mushroom$`cap-color`[mushroom$`cap-color` == "r"] <- "green"
+mushroom$`cap-color`[mushroom$`cap-color` == "p"] <- "pink"
+mushroom$`cap-color`[mushroom$`cap-color` == "u"] <- "purple"
+mushroom$`cap-color`[mushroom$`cap-color` == "e"] <- "red"
+mushroom$`cap-color`[mushroom$`cap-color` == "w"] <- "white"
+mushroom$`cap-color`[mushroom$`cap-color` == "y"] <- "yellow"
+
+paste("cap-color Values after recode")
+table(mushroom$`cap-color`)
+```
+
+# Final Dataframe
+```{r}
+head(mushroom)
+```
+# Table of final dataframe
+```{r}
+sapply(mushroom, table)
+```
+
